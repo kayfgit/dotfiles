@@ -3,10 +3,10 @@ require("config.lazy")
 local opts = { noremap = true, silent = true }
 
 -- theme
-vim.cmd.colorscheme("unokai")
--- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
--- vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
--- vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
+vim.cmd.colorscheme("slate")
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
 
 -- basic
 vim.g.mapleader = " "
@@ -17,6 +17,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
 vim.opt.clipboard:append("unnamedplus")
+vim.opt.shell = "nu"
 
 -- indent
 vim.opt.ignorecase = true
@@ -37,11 +38,6 @@ vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 vim.opt.splitbelow = true
 vim.opt.splitright = true
-
--- tab
-vim.keymap.set("n", "te", ":tabedit<CR>", opts)
-vim.keymap.set("n", "<tab>", ":tabnext<CR>", opts)
-vim.keymap.set("n", "<s-tab>", ":tabprev<CR>", opts)
 
 -- win nav
 vim.keymap.set("n", "sh", "<C-w>h")
